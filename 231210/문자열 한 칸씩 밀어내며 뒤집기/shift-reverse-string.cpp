@@ -48,7 +48,7 @@ int main() {
             moveForward(str);
             break;
         case 2:
-             moveBackward(str);
+            moveBackward(str);
             break;
         case 3:
             reverse(str);
