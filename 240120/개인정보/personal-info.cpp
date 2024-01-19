@@ -45,7 +45,8 @@ int main() {
     sort(persons, persons+5, cmpName);
     for(Person person : persons)
     {
-        cout << person.name << " " << person.height << " " << person.weight << endl;
+        cout << person.name << " " << person.height << " ";
+        printf("%.1f\n", person.weight);
     }
 
     cout << endl;
@@ -54,7 +55,8 @@ int main() {
     sort(persons, persons+5, cmpHeight);
     for(Person person : persons)
     {
-        cout << person.name << " " << person.height << " " << person.weight << endl;
+        cout << person.name << " " << person.height << " ";
+        printf("%.1f\n", person.weight);
     }
 
     return 0;
