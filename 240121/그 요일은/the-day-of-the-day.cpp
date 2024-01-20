@@ -39,7 +39,7 @@ int getDayOfWeekCnt(int days, int dayOfWeek)
     int cnt = days / 7;
     int remain = days % 7;
 
-    if(remain == dayOfWeek)
+    if(remain >= dayOfWeek)
         cnt++;
     
     return cnt;
