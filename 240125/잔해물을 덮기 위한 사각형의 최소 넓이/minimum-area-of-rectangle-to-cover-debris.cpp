@@ -22,6 +22,7 @@ int getAnswer(int map[][2001], int target)
 {
     int left_down_x = (int)(1e9), left_down_y = (int)(1e9);
     int right_up_x = -1, right_up_y = -1;
+    bool detected = false;
 
     for(int x=0; x <= 2000; x++)
     {
@@ -29,6 +30,7 @@ int getAnswer(int map[][2001], int target)
         {
             if(map[x][y] == target)
             {
+                detected = true;
                 if(left_down_x >= x && left_down_y >= y)
                 {
                     left_down_x = x;
@@ -43,6 +45,9 @@ int getAnswer(int map[][2001], int target)
             }
         }
     }
+
+    if(detected == false)
+        return 0;
 
     int diff_x = right_up_x - left_down_x + 1;
     int diff_y = right_up_y - left_down_y + 1;
