@@ -11,13 +11,21 @@ int main() {
         cin >> arr[i];
     }
 
-    int answer = 0;
+    int max_cnt = 1;
+    int cnt = 0;
     for(int i=0; i<n; i++)
     {
         if(i == 0 || arr[i] != arr[i-1])
-            answer++;
+        {
+            cnt = 1;
+        }
+        else
+        {
+            cnt++;
+            max_cnt = (max_cnt < cnt) ? cnt : max_cnt;
+        }
     }
 
-    cout << answer << endl;
+    cout << max_cnt << endl;
     return 0;
 }
